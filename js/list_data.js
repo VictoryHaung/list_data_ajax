@@ -7,6 +7,10 @@ $(document).ready(function(){
 
 	$('#button_page').on('click',function() {
 		var input_page  = $('#input_page').val();
+		if(isNaN(input_page)){
+			alert('error');
+			return;
+		}
 		$.ajax({
 			url:'php/demo.php',
 			type: 'POST',
